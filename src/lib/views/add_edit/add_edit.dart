@@ -204,6 +204,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20.0),
                                   ),
+                                  
                                   circularStrokeCap: CircularStrokeCap.round,
                                   backgroundColor: Colors.green[600],
                                   progressColor: Colors.red[700],
@@ -214,14 +215,14 @@ class _AddEditScreenState extends State<AddEditScreen> {
                                     new LinearPercentIndicator(
                                       width: 60.0,
                                       lineHeight: 8.0,
-                                      percent: 1,
+                                      percent: 1.0 - result['confidence'] ,
                                       trailing: const Text('Percent Wrong'),
                                       progressColor: Colors.green[600],
                                     ),
                                     new LinearPercentIndicator(
                                       width: 60.0,
                                       lineHeight: 8.0,
-                                      percent: 1,
+                                      percent: result['confidence'],
                                       trailing: const Text('Percent Right'),
                                       progressColor: Colors.red[700],
                                     ),
